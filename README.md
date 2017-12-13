@@ -22,10 +22,11 @@ The solution would be 'ratcatdogcat' - at 12 letters, it is the longest word mad
 -----------------------------
 COMMENTS
 -----------------------------
-I have used method iteration to find the longest word made from other words.
-Making pairs of each word and comparing with all existing words.
+ -I have written console application in C# language, .Net Framework 4.7 and used Microsoft Visual Studio Community 2017.
 
-Setting before running application
-copy 'wordlist.txt' file to local folder and update following folder path in 'App.config' file.
- 
-<add key="WordsFilePath" value="C:\SEW\wordlist.txt"/>
+ -I have used method - iteration to find the longest word made from other words. 
+  Making pairs of each word and comparing with all existing words.
+
+ -Setup before running application
+  copy 'wordlist.txt' file to local folder and update following folder path key value in 'App.config' file. 
+  <add key="WordsFilePath" value="C:\SEW\wordlist.txt"/>
