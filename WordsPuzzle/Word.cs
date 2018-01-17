@@ -93,5 +93,112 @@ namespace WordsPuzzle
             return longestWord;
         }
 
+        /// <summary>
+        /// Get count of words made from other words
+        /// </summary>
+        /// <param name="words">list of existing words</param>
+        /// <returns></returns>
+        public static int GetWordCountMadeFromOthers(List<string> words)
+        {
+            if (words == null || words.Count == 0)
+            {
+                return 0;
+            }
+
+            int countWords = 0;
+
+            HashSet<String> setOfWords = new HashSet<String>(words);
+
+            foreach (var word in setOfWords)
+            {
+                if (IsMadeFromOtherWords(word, setOfWords) == true)
+                {
+                    countWords++;
+                }
+            }
+
+            return countWords;
+        }
+
+        /// <summary>
+        /// Get count of words made to other words
+        /// </summary>
+        /// <param name="words">list of existing words</param>
+        /// <returns></returns>
+        public static int GetWordCountMadeToOthers(List<string> words)
+        {
+            if (words == null || words.Count == 0)
+            {
+                return 0;
+            }
+
+            int countWords = 0;
+
+            HashSet<String> setOfWords = new HashSet<String>(words);
+
+            foreach (var word in setOfWords)
+            {
+                if (GetCountWordMadeToOtherWords(word, setOfWords) > 1)
+                {
+                    countWords++;
+                }
+            }
+
+            return countWords;
+
+
+            /*
+            // other approach, but takes more time.
+            var abc = from w1 in words
+                      join w2 in words on w1.Contains(w2) = true
+            select w1;
+
+            var abc = from w1 in words
+                      from w2 in words
+                      where w1.Contains(w2)
+                      select w2;
+
+            int a = abc.Count();
+            */
+        }
+
+        /// <summary>
+        /// Check if made to other existing words.
+        /// </summary>
+        /// <param name="word">any existing word</param>
+        /// <param name="setOfWords">all existing words</param>
+        /// <returns></returns>
+        private static int GetCountWordMadeToOtherWords(string word, HashSet<string> setOfWords)
+        {
+            if (String.IsNullOrEmpty(word))
+            {
+                return 0;
+            }
+
+            int count = 0;
+
+            foreach (var w in setOfWords)
+            {
+                count += w.Contains(word) ? 1 : 0;
+
+                if (count > 1)
+                    break;
+            }
+
+            return count;
+
+            /*
+            // other approach, but takes more time.
+            if (String.IsNullOrEmpty(word))
+            {
+                return 0;
+            }
+
+            int count = setOfWords.Where(w => w.Contains(word)).Count();
+
+            return count;
+            */
+        }
+
     }
 }

@@ -4,3 +4,9 @@ c:\users\vgehlot\documents\visual studio 2017\Projects\WordsPuzzle\WordsPuzzle\b
 c:\users\vgehlot\documents\visual studio 2017\Projects\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.exe
 c:\users\vgehlot\documents\visual studio 2017\Projects\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.pdb
 c:\users\vgehlot\documents\visual studio 2017\Projects\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.csprojResolveAssemblyReference.cache
+C:\GitHub\WordsPuzzle\WordsPuzzle\bin\Debug\WordsPuzzle.exe.config
+C:\GitHub\WordsPuzzle\WordsPuzzle\bin\Debug\WordsPuzzle.exe
+C:\GitHub\WordsPuzzle\WordsPuzzle\bin\Debug\WordsPuzzle.pdb
+C:\GitHub\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.csprojResolveAssemblyReference.cache
+C:\GitHub\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.exe
+C:\GitHub\WordsPuzzle\WordsPuzzle\obj\Debug\WordsPuzzle.pdb
